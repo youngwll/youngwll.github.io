@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			/* 清除浏览器自带边距为边界 */
+			*{
+				margin:0;
+				padding:0;
+			}
+			
+			body{
+				background-color: black;
+			}
+			
+			a{
+				text-decoration: none;
+				
+			}
+			
+			.mw_logo{
+				width: 80px;
+				height: 20px;
+				background-color: aqua;
+				background: url(../img/mw2-logo.png);
+				background-size: cover;
+				position: relative;
+				top: 30%;
+				left: 2%;
+			}
+			
+			.top_nav{
+				width: 100%;
+				height: 60px;
+				background-color: black;
+				
+			}
+			
+			.top_li{
+				float: left;
+				text-align: center;
+				font-size: 15px;
+				margin: 10px;
+				line-height: 30px;
+				height: 30px;
+				color: grey;
+				transition: 0.5s
+			}
+			
+			.top_ul{
+				list-style: none;
+				position: relative;
+				top: -25%;
+				left: 10%;
+			}
+			
+			.top_li:hover{
+				color: aliceblue;
+				transition: 0.3s;
+			}
+			
+			.top_right{
+				width: 152px;
+				height: 60px;
+				float: right;
+				background-color: #71af3a;
+				position: relative;
+				top: -35%;
+			}
+			
+			.login{
+				display: inline-block;
+				float: right;
+				position: relative;
+				right: 3%;
+				/* top:30%; */
+				text-decoration: none;
+				
+				transition: 0.3s;
+			}
+			
+			/* .top_a:hover{
+				color: aliceblue;
+				transition: 0.3s;
+				color: aliceblue;
+			} */
+			.a_log{
+				text-decoration: none;
+				color: grey;
+				transition: 0.3s;
+			}
+			
+			.a_log:hover{
+				color: aliceblue;
+				transition: 0.3s;
+			}
+			/* --------------------------------视频区域------------------------------ */
+			
+			.video_and_text_father{
+				width: 100%;
+				height: 700px;
+				
+			}
+			
+			.text_logo{
+				width: 100%;
+				height: 700px;
+				
+				
+			}
+			
+			.video{
+				width: 100%;
+				height: 100%;
+				
+				position: absolute;
+				z-index: -1;
+			}
+			
+			.video2{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.wm_logo_son{
+				width: 300px;
+				height: 190px;
+			}
+			
+			.wm_logo{
+				width: 300px;
+				height: 190px;
+				position: relative;
+				top: 20%;
+				
+			}
+			
+			.text_logo_father{
+				width: 70%;
+				height: 100%;
+				margin: 0 auto;
+				/* background-color: chocolate; */
+			}
+			
+			.text_sth{
+				width: 300px;
+				height: 150px;
+				float: right;
+			}
+			
+			.sth{
+				width: 300px;
+				height: 150px;
+			}
+			
+			/* -----------------------------------底部导航栏-------------------------------- */
+			
+			.foot{
+				width: 72%;
+				height: 600px;
+				background-color: black;
+				margin: 0 auto;
+			}
+			
+			.footer_div_1{
+				width: 100%;
+				height: 30px;
+				background-color: black;
+			}
+			
+			.foot_li{
+				float: left;
+				text-align: center;
+				margin: 5px;
+				color: aliceblue;
+				
+			}
+			
+			.footer_ul{
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.footer_div_2{
+				width: 80%;
+				height: 100%;
+				margin: 0 auto;
+			}
+			
+			.work_logos{
+				width: 100%;
+				height: 400px;
+				
+				position: relative;
+				
+			}
+			
+			.footer_download_logos{
+				background-size: cover;
+				background-position: center center;
+				position: absolute;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="top_nav">
+			
+			<div class="mw_logo">
+				
+			</div>
+			
+			<ul class="top_ul">
+				<li><a class="top_li" href="">FEATURES</a></li>
+				<li><a class="top_li" href="">SEASON</a></li>
+				<li><a class="top_li" href="">BATTLE PASS</a></li>
+				<li><a class="top_li" href="">RICOCHET</a></li>
+				<li><a class="top_li" href="">BLOGS</a></li>
+			</ul>
+			
+			<div class="top_right">
+				<p style="height: 50px;line-height: 50px;text-align: center;color: aliceblue;"><b>BACK HoME</b></p>
+			</div>
+			
+			<div class="login"><a class="a_log" href="./登录.html">LOGIN</a> <span style="color: aliceblue;">|</span>  <a class="a_log" href="./注册页面.html">SIGN UP</a></div>
+			
+			
+		</div>
+		
+		
+		<!----------------------------------------- 背景视频区域------------------------------------- -->
+		
+		<div class="video_and_text_father">
+			
+			<div class="video">
+				<video class="video2" src="../img/WM2.mp4" autoplay muted loop>
+			</div>
+			
+			
+			<div class="text_logo_father">
+				
+				<div class="wm_logo">
+					<img class="wm_logo_son" src="../img/cod-mw2-logo (1).png" alt="" >
+				</div>
+				
+				<div class="text_sth">
+					<img class="sth" src="../img/LOC_EN.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+		<!------------------------- 尾部导航栏 ----------------->
+		<div class="foot">
+			
+			<div class="footer_div_1">
+				
+				<div class="footer_div_2">
+					
+					<ul class="footer_ul" style="list-style: none;">
+						<li><a class="foot_li" href="">LEGAL</a></li>
+						<li class="foot_li">|</li>
+						<li ><a class="foot_li" href="">TERMS OF US</a></li>
+						<li class="foot_li">|</li>
+						<li><a class="foot_li" href="">PRIVACY POLOCY</a></li>
+						<li class="foot_li">|</li>
+						<li><a class="foot_li" href="">CAREERS</a></li>
+						<li class="foot_li">|</li>
+						<li><a class="foot_li" href="">COOKIE POLICY</a></li>
+						<li class="foot_li">|</li>
+						<li><a class="foot_li" href="">SUPPORT</a></li>
+						<li class="foot_li">|</li>
+						<li><a class="foot_li" href="">CODE OF CONDUCT</a></li>
+					</ul>
+					
+				</div>
+				
+			</div>
+			
+			<hr style="width: 100%;color: aliceblue;">
+			
+			
+			
+				<img class="footer_download_logos" src="../img/footer_download_logos.png.png" alt="">
+			
+			
+			
+		</div>
+		
+		
+	</body>
+</html>

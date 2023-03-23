@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		/* 去除自带边框 */
+		*{
+			margin:0;
+			padding:0;
+		}
+		
+		body{
+			background: radial-gradient(circle,#262626,#000);
+			
+			/* background: linear-gradient(linear-gradient,#262626,#000); */
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		/* ------------------------------------头部导航栏----------------------------------- */
+			.header_navigation{
+				width: 100%;
+				height: 60px;
+				
+				position: fixed;
+				
+				background-color: rgba(255, 255, 255, 0.1);
+				
+				z-index: 10;
+			}
+			
+			.header_div_son{
+				width: 90%;
+				height: 60px;
+				margin: 0 auto;
+				
+			}
+			
+			a.top{
+				color: white;
+				text-decoration: none;/* 去除下划线 */
+				
+			}
+			
+			a.top:hover{
+				color: yellow;
+				
+			}
+			
+			a.top_sign_in:hover{
+				color: yellow;
+				
+			}
+			
+			.TOP_DIV-SON{
+				text-align: center;
+				display: inline-block;
+				width: 80PX;
+				height: 50px;
+				line-height: 20px;
+				color: white;
+				/* background-color: #000000; */
+				line-height: 50px;/* height=line-height 时 行内块元素实现垂直居中*/
+				
+			}
+			
+			h3{
+				display: inline-block;
+				color: white;
+				font-size: 30px;
+				margin-right: 20px;
+			}
+			
+			.top_div_button{
+				
+				position: relative;
+				left: 92%;
+				top: -70%;
+			}
+			
+			.top_sign_in{
+				color: white;
+				text-decoration: none;/* 去除下划线 */
+			}
+			
+			.hr_div{
+				width: 100%;
+				height: 30px;
+				
+				position: relative;
+				
+			}
+			
+			.ds_logo{
+				width: 120px;
+				height: 30px;
+				position: relative;
+				top: 10%;
+			}
+			
+			/* -----------------按钮样式----------- */
+			.button{
+				width: 80px;
+				height:40px;
+				background-color: #262626;
+				border-radius: 60px;
+				font-size: 16px;
+				color: rgba(255,255,255,0.85);
+				
+				border: 4px solid #000;
+				box-shadow: inset 0 0 30px #000;
+				overflow: hidden;
+				position: relative;
+				
+				
+			}
+			
+			.button::before{
+				content: "";
+				width: 70%;
+				height: 100%;
+				background-color: rgba(255,255,255,0.1);
+				
+				position: absolute;
+				top: 0;
+				left: -10%;
+				transform: skewX(-15deg);
+				transition: 0.5s;
+			}
+			.button:hover:before{
+				left: 200px;
+			}
+			
+			.button::after{
+				content: "";
+				width: 50px;
+				height: 100%;
+				background-color: rgba(255,255,255,0.1);
+				
+				position: absolute;
+				top: 0;
+				left: -70%;
+				transform: skewX(-15deg);
+				transition: 0.5s;
+				transition-delay: 0.2s;
+			}
+			.button:hover:after{
+				left: 200px;
+			}
+			/*----------------------------------- 背景视频区域 --------------------------------*/
+			.background_vidio{
+				width: 100%;
+				height: 700px;
+				z-index: -1;
+			}
+			
+			.background_vidio1{
+				
+				height: 100%;
+				
+			}
+			
+			.video1{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				
+				
+			}
+			
+			.text{
+				position: relative;
+				width: 400px;
+				height: 100px;
+				left: -3%;
+				text-align: center;
+				color: white;
+				top: 30%;
+				left: 5%;
+				font-size: 25px;
+			}
+			
+			.video_button{
+				border-radius: 60px;
+				font-size: 3px;
+				width: 200px;
+				height: 40px;
+				position: relative;
+				top: 10%;
+				background-color: dodgerblue;
+				color: white;
+				opacity: 90%;
+			}
+			
+			.img_warzon{
+				width: 540px;
+				height: 180px;
+				
+			}
+			
+			.img_warzon_father{
+				/* background-color: chocolate; */
+				width: 540px;
+				height: 180px;
+				position: relative;
+				top: 25%;
+				left: -3%;
+			}
+			
+			.background_vidio_center{
+				width:1300px ;
+				height: 100%;
+				/* background-color: chocolate; */
+				margin: 0 auto;
+				z-index: 2;
+				position: relative;
+				top:-100% ;
+			}
+			
+			/*--------------------------------- 视频区下方导航栏 ---------------------*/
+			.under_the_vidio_navigation{
+				margin: 0 auto;/* 居中 */
+				width: 1240px;
+				height: 200px;
+				/* background-color: #262626; */
+				background: linear-gradient(to top,#262626,#000);
+			}
+			
+			.under_the_vidio_h2{
+				position: relative;
+				left: 23%;
+				/* margin-top: 10px; */
+				margin-bottom: 20px;
+				color: white;
+				
+			}
+			
+			.navigation_chunk{
+				display:inline-block;
+				font-size: 30px;
+				text-align: center;
+				color: white;
+				
+				width: 300px;
+				height: 100px;
+				line-height: 100px;
+				
+				position: relative;
+				top:-10px;
+				transition: 0.2s;
+				
+			}
+			
+			.navigation_chunk_father{
+				text-align: center;
+				position: relative;
+				top: 5%;
+				transition: 0.3s;
+			}
+			
+			.navigation_chunk:hover a{
+				font-size: 40px;
+				transition: 0.3s;
+				
+			}
+			
+			.navigation_chunk:hover{
+				/* background-color:rgba(0, 0, 205,0.4); */
+				transition: 0.3s;
+				
+			}
+			
+			/*------------------- ------------------主体区域-------------------------- */
+			/* -------------------基本布局---------------- */
+			.main{
+				margin: 0 auto;
+				width: 1240px;
+				height: 920px;
+				background-color: black;
+			}
+			
+			#box1,#box2,#box3,#box4,#box5,#box6{
+				width: 400px;
+				height: 450px;
+				background-color: white;
+				overflow: hidden;
+				background: linear-gradient(to bottom,#262626,#000);
+			}
+			
+			#box2{
+				position: relative;
+				top: -450px;
+				left: 420px;
+				
+			}
+			
+			#box3{
+				position: relative;
+				top: -900px;
+				left: 840px;
+				
+			}
+			
+			#box4{
+				position: relative;
+				top: -880px;
+			}
+			
+			#box5{
+				position: relative;
+				top: -1330px;
+				left: 420px;
+			}
+			
+			#box6{
+				position: relative;
+				top: -1780px;
+				left: 840px;
+			}
+			
+			/* ----------------内嵌布局----------- */
+			
+			.img{
+				width: 400px;
+				height: 225px;
+			}
+			
+			p{
+				color: white;
+				
+			}
+			
+			p.p1{
+				font-size: 15px;
+				position: relative;
+				top: 5%;
+			}
+			
+			p.p2{
+				
+				transition: 0.3s;
+				color: #262626;
+			}
+			
+			p.p_more{
+				color: white;
+			}
+			
+			.box_img{
+				width: 400px;
+				height: 225px;
+				/* background-color: coral; */
+				transition: 0.3s;
+			}
+			
+			.img_text{
+				width: 400px;
+				height: 105px;
+				/* background-color: coral; */
+				transition: 0.3s;
+				position: relative;
+				top: -4.5%;
+				background-color: #262626;
+			}
+			
+			.line{
+				width: 400px;
+				height: 20px;
+				/* background-color: black; */
+			}
+			
+			
+			
+			.box_text{
+				width: 400px;
+				height: 215px;
+			/* 	background-color: brown; */
+				z-index: 2;
+				position: relative;
+				top: -4.5%;
+				transition: 0.3s;
+				background-color: #262626;
+			}
+			
+			.hr1{
+				color: white;
+				width: 302px;
+				float: left;
+				background-color: #b3b6b7;
+			}
+			
+			.hr2{
+				width: 100px;
+				color: #b3b6b7;
+				background-color: #b3b6b7;
+				float: right;
+				display: inline-block;
+				transform: rotate(28deg);
+				position: relative;
+				top: 10%;
+				left: -0.2%;
+			}
+			
+			.more{
+				width: 300px;
+				height: 100px;
+				position: relative;
+				top: -50%;
+				/* background-color: orange; */
+				z-index: 10;
+				transition: 0.3s;
+			}
+			
+			.p_more{
+				position: relative;
+				left: 5%;
+				top: 30%;
+			}
+			
+			/* ----------------动态效果---------------- */
+			
+			.box:hover .box_img{
+				transform: translateY(-10%);
+				transition: 0.3s;
+			}
+			
+			.box:hover .img_text{
+				transform: translateY(-30%);
+				transition: 0.3s;
+			}
+			
+			.box:hover .box_text{
+				transform: translateY(-45%);
+				transition: 0.3s;
+			}
+			
+			.box_text:hover .hr1{
+				background-color: royalblue;
+			}
+			
+			.box:hover .p2{
+				color: white;
+				transition: 0.3s;
+			}
+			
+			.box:hover .p_more{
+				color:royalblue ;
+			}
+			
+			.box:hover .more{
+				transform: translateY(60%);
+				transition: 0.3s;
+				width: 400px;
+				background: linear-gradient(to bottom,#262626,#000);
+			}
+			
+			/*--------------------------- 下方导航栏 ---------------------------*/
+			.footer_navigation{
+				width: 100%;
+				height: 340px;
+				background-color: black;
+				background: linear-gradient(to bottom,#262626,#000);
+			}
+			
+			.footer_navigation_main{
+				margin: 0 auto;
+				width: 1240px;
+				height: 210px;
+			}
+			
+			.footer_navigation_left{
+				width: 25%;
+				height: 100%;
+				position: relative;
+				top: -100%;
+				left: 25%;
+				
+				color: white;
+			}
+			
+			.footer_navigation_center{
+				width: 25%;
+				height: 100%;
+				position: relative;
+				top: -200%;
+				left: 50%;
+			
+				color: white;
+			}
+			
+			.footer_navigation_right{
+				width: 25%;
+				height: 210px;
+				position: relative;
+				top: -300%;
+				left: 75%;
+				
+				color: white;
+			}
+			
+			.list1{
+				list-style: none;
+			}
+			
+			a.foooter{
+				color: #b3b6b7;
+				text-decoration: none;/* 去除下划线 */
+				transition: 0.6s;
+			}
+			
+			.foooter:hover{
+				font-size:20px ;
+				color: aliceblue;
+				transition: 0.6s;
+			}
+			
+			li{
+				margin-top: 10px;
+				font-size: 6px;
+			}
+			
+			.footer_img1{
+				margin: 0 auto;
+				width: 230px;
+				height: 130px;
+				background-image: url(../img/dongshi.png);
+			}
+			
+			.footer_img2{
+			
+				width: 25%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.logo{
+				width: 140px;
+				height: 60px;
+				background-image: url(../img/logo.png);
+				position: relative;
+				top: 70%;
+			}
+			
+			.other{
+				width: 140px;
+				height: 60px;
+				
+				
+				
+			}
+
+			#img{
+				width: 190px;
+				height: 70px;
+			}
+			
+			.list1{
+				color: #b3b6b7;
+			}
+			
+			
+			/* .foooter{
+				transform: 0.5s;
+			}
+			
+			.foooter:hover{
+				font-size: 20px;
+				transform: 0.5s;
+			} */
+			/* ---------页面底部------- */
+			.bottom{
+				width: 100%;
+				height: 190px;
+				background-color: hotpink;
+				background-image: url(../img/bottom.png);
+				/* 背景图不平铺 */
+				background-position: no-repeat;
+				/* 让背景图片基于容器大小伸缩 */
+				background-size: cover;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!------- 头部导航栏 ------->
+		<div class="header_navigation">
+			<div class="header_div_son">
+				<img class="ds_logo" src="../img/activision_logo_white-text.png" alt="">
+				
+				<div class="TOP_DIV-SON"><a class="top" href="https://www.activision.com/games">GAMES</a></div>
+				<div class="TOP_DIV-SON"><a class="top" href="https://www.activision.com/company/aboutus">ABOUT</a></div>
+				<DIV class="TOP_DIV-SON"><a class="top" href="https://careers.activision.com/">GAREERS</a></DIV>
+				<DIV class="TOP_DIV-SON"><a class="top" href="">SUPPORT</a></DIV>
+				
+				<div class="top_div_button"> 
+					<a href="注册页面.html"> <button class="button">SIGNUP</button> </a> 
+					<a href="登录.html" class="top_sign_in">SIGNIN</a>
+					
+				</div>
+				
+				
+				
+			</div>
+			<div class="hr_div"><hr></div>
+			
+		</div>
+		<!-- ------------------------------------背景视频区域--------------------------------- -->
+		<div class="background_vidio">
+			
+			
+			
+			<div class="background_vidio1">
+				
+				
+				<video class="video1" src="../img/background.mp4" autoplay muted loop>
+				
+				
+			</div>
+			
+			<div class="background_vidio_center">
+				
+				<div class="img_warzon_father">
+					<img class="img_warzon" src="../img/WZ2_Logo.png" >
+				</div>
+				
+				<div class="text">
+					<p><b>Ready Up and Drop into</b></p>
+					<p><b>Call of Duty®: Warzone™2.0</b></p>
+					<a href="下载.html"><button class="video_button"><b>PLAY FREEE NOW</b></button></a>
+				</div>
+				
+			</div> -->
+			
+			
+		</div>
+		
+		<!-- ----------------------------------------------视频区下方导航栏----- --------------------------------->
+		<div class="under_the_vidio_navigation">
+			
+			<div class="under_the_vidio_h2">
+				
+				<h2 style="font-size:50px;">LATEST NEWS & ARTICLES</h2>
+			
+			</div>
+			
+			<div style="background-color: #000;" class="under_the_vidio_hr"><hr style="width: 100%;"></div>
+			
+			<div class="navigation_chunk_father">
+				<div class="navigation_chunk"><a href="" ><b>ALL NEWS</b></a></div>
+				<div class="navigation_chunk"><a href="" ><b>ACTIVISION</b></a></div>
+				<div class="navigation_chunk"><a href="" ><b>CALL</b><div style="font-size: 6px;display: inline-block;height: 6px; line-height: 6px;">of</div> <b>DUTY</b></a></div>
+			</div>
+			
+			<div style="position: relative;top:5%;color: white;"><hr style="width: 100%;"></div>
+		</div>
+		
+		<!-------------------------------- 主体区域 ------------------------->
+		<div class="main">
+			
+			<div id="box1" class="box">
+				
+				<div class="box_img">
+					
+					<img  class="img"src="../img/WZM-PREREG-11-17-TOUT.jpg">
+					
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>NOV 17, 2022</b></p>
+					<p class="p1"><b>Call of Duty®: Warzone™ Mobile Pre-Orders Now Available for iOS on the App Store</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">iOS users can now pre-order Call of Duty®: Warzone™ Mobile on their devices fromthe App Store. Having just surpassed 25 million pre-registrations on Google Play, players who pre-order on the App Store or pre-register on Google Play before global launch will unlock access to all previously announced pre-order milestone rewards when</p>
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+			
+			
+			<div id="box2" class="box">
+				
+				<div class="box_img">
+					<img class="img" src="../img/MWII-S01-BP-TOUT.jpg" alt="">
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>Nov 15, 2022</b></p>
+					<p class="p1"><b>New Battle Pass System for Call of Duty®: Modern Warfare® II and Warzone™ 2.0 Season 01</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">Advance through the AO your way in an all-new Battle Pass system. Expect the same great rewards — free functional weapons and access to 100+ items via Battle Pass upgrade — with more choice on how and when to earn them.</p>
+					
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+			
+			
+			<div id="box3" class="box">
+				
+				<div class="box_img">
+					<img class="img" src="../img/WZ2-S01-DMZ-TACTICS-TOUT.jpg" alt="">
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>Nov 14, 2022</b></p>
+					<p class="p1"><b>Call of Duty®: Warzone™ 2.0 Battle Royale, DMZ Overview</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">New threats, new allies, new tools, and new experiences that bring you into WarzoneTM like never before. Learn about all the important key additions and changes coming in the free-to-play Warzone 2.0 experience before you drop into Al Mazrah this week!</p>
+					
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+			
+			
+			<div id="box4" class="box">
+				
+				<div class="box_img">
+					<img class="img" src="../img/MWII-GUIDE-01-SHOOTHOUSE-TOUT.jpg" alt="">
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>Nov 10, 2022</b></p>
+					<p class="p1"><b>Call of Duty®: Modern Warfare® II  Shoot House Map Intel</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">The Mission: Detailing the map, tactics, and tips for a 6v6 Multiplayer map set in a live fire training range.</p>
+					
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+			
+			
+			<div id="box5" class="box">
+				
+				<div class="box_img">
+					<img class="img" src="../img/MWII-SEASON-01-ROADMAP-TOUT.jpg" alt="">
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>Nov 09, 2022</b></p>
+					<p class="p1"><b>Call of Duty®: Warzone™ 2.0 and Call of Duty®: Modern Warfare® II Season 01 Overview</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">Get Ready for a New Era — the launch of free-to-play Call of Duty: Warzone 2.0 and its much-anticipated DMZ mode, the debut of reimagined community-favorite maps in Modern Warfare® II Multiplayer, and the lead-up to the</p>
+					
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+			
+			
+			<div id="box6" class="box">
+				
+				<div class="box_img">
+					<img class="img" src="../img/WZ-Legacy-TOUT.jpg" alt="">
+				</div>
+				
+				<div class="img_text">
+					
+					<p class="p1"><b>Nov 08, 2022</b></p>
+					<p class="p1"><b>Call of Duty®: Warzone™ Legacy Video</b></p>
+					
+				</div>
+				
+				<div class="box_text">
+					
+					<hr class="hr1"> <hr class="hr2">
+					<br>
+					<br>
+					<br>
+					<p class="p2">Your actions in the original Call of Duty®: Warzone™ can be forever captured and commended in a personalized recap video. Get details on how you can get your own Warzone Legacy video here.</p>
+					
+				</div>
+				
+				<div class="more">
+					<p class="p_more"><b>READ MORE ></b></p>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!------- 下方导航栏 ------->
+		<div class="footer_navigation">
+			<hr style="width: 100%;">
+			<div class="footer_navigation_main">
+				
+				<div class="footer_img2">
+					<div class="other">
+						<img src="../img/other.png" id="img">
+					</div>
+					
+					
+					<div class="logo"></div>
+				</div>
+				
+				
+				
+				<div class="footer_navigation_left">
+					<b ><h2 style="margin-bottom: 30px;">POPULAR GAMES</h2></b>
+					<ul class="list1">
+						<li><a class="foooter" href="">Call Of Duty</a></li>
+						<li><a class="foooter" href="">Tony Hawk Pro Skater</a></li>
+						<li><a class="foooter" href="">Crash Bandicoot</a></li>
+						<li><a class="foooter" href="">Spyro</a></li>
+						<li><a class="foooter" href="">Sekiro</a></li>
+					</ul>
+					
+				</div>
+				
+				<div class="footer_navigation_center">
+					<b><h2 style="margin-bottom: 30px;">COMPANY</h2></b>
+					
+					<ul class="list1">
+						<li><a class="foooter" href="">Press</a></li>
+						<li><a class="foooter" href="">Research</a></li>
+						<li><a class="foooter" href="">Activion Blizzard</a></li>
+						<li><a class="foooter" href="">Contact Us</a></li>
+					</ul>
+					
+					
+				</div>
+				
+				<div class="footer_navigation_right">
+					<b><h2>LEGAL</h2></b>
+					
+					<UL class="list1">
+						<LI><a class="foooter" href="">Terms of us</a></LI>
+						<LI><a class="foooter" href="">Privacy Policy</a></LI>
+						<LI><a class="foooter" href="">Cppkie Policy</a></LI>
+						<LI><a class="foooter" href="">Cppkie Settings</a></LI>
+						<LI><a class="foooter" href="">Online Safety</a></LI>
+						<LI><a class="foooter" href="">Appkicant Privacy Policy</a></LI>
+					</UL>
+				</div>
+				
+			</div>
+			
+			<div class="footer_img1"></div>
+		</div>
+		
+		<!-- -------------网页最底部------------ -->
+		<div class="bottom">
+			
+		</div>
+	</body>
+</html>

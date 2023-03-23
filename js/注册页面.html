@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册账号</title>
+		<style type="text/css">
+		/* 清除浏览器自带边距为边界 */
+		*{
+			margin:0;
+			padding:0;
+		}
+		
+		/* ---------------设置主体样式 --------------*/
+			.input_massage{
+				display: inline-block;
+				width: 300px;
+				height: 40px;
+				color: #7D7D7D;
+				border-radius: 5px;
+				
+			}
+				
+			.box_form{
+				position: relative;
+				left:150px;
+				
+			}
+				
+			.box1{
+				display:block;
+				width: 304px;
+				height: 40px;
+				margin-top: 25px;
+				border-radius: 5px;
+			}
+			.p_son{
+				color: white;
+				font-size: 20px;
+			}
+			.box_father{
+				
+				margin: 0 auto;/* 居中 */
+				width: 1000px;
+				height: 750px;
+				position: relative;
+				
+			}
+			p{
+				position: relative;
+				
+			}
+			
+			.div_son{
+				
+				width: 306px;
+				margin: 0 auto;
+				margin-top: 80px;
+			}
+			.div_header{
+				
+			}
+			
+			b{
+				font-size: 30PX;
+				display: block;
+				text-align: center;
+				margin-top: 10PX;
+			}
+			
+			/*------------- 设置底部样式 ---------*/
+			
+			.footer_div_father{
+				position: relative;
+				width: 1000px;
+				height: 300px;
+				margin: 0 auto;
+				
+			}
+			
+			.ul{
+				font-size: 18px;
+				list-style: none;
+			}
+			
+			li{
+				margin: 10px;
+				
+			}
+			a:hover{
+				color: yellow;
+				text-decoration: none;/* 去除超链接下划线 */
+			}
+			a{
+				color: #888888;
+			}
+			
+			.img_age{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				left: 900px;
+				top: -281px;
+			}
+			.img_logo{
+				position: relative;
+				left: 700px;
+				top: -233px;
+			}
+			/*------------- 背景图片--------- */
+			
+			
+			.background_img_div{
+				
+				width: 1600px;
+				height: 700px;
+				background-color: #0081BD;
+				background: url(../img/bjtp.jpg) no-repeat;
+				/* 背景图垂直水平居中 */
+				background-position: center center;
+				/* 背景图不平铺 */
+				background-position: no-repeat;
+				/* 让背景图片基于容器大小伸缩 */
+				background-size: cover;
+				position: absolute;/* 固定定位及以下为居中背景图片的操作 */
+				transform: translateX(-50%);
+				opacity: 10%;/* 透明度10% */
+				top: 0;
+				left:50%
+				
+				
+			}
+			
+			body{
+				background-color: black;
+			}
+			
+			/* --------------按钮样式----------- */
+			a.bt{
+				color: #FFFFFF;
+				font-size: 20px;
+				text-decoration: none;
+				border: 4px solid;
+				padding: 12px 10px;
+				position: relative;
+			}
+			a.bt::before,a.bt::after{
+				content: "";
+				position: absolute;
+				background-color: black;
+				width: 10px;
+				height: 4px;
+				transform: skew(-30%);
+				transition: 0.5s linear;
+			}
+			
+			a.bt::before{
+				top: -4px;
+				left: 20%;
+			}
+			
+			a.bt::after{
+				bottom: -4px;
+				right: 20%;
+			}
+			
+			a.bt:hover::before{
+				left: 90%;
+			}
+			
+			a.bt:hover::after{
+				
+				right: 90%;
+			}
+			
+			a.bt{
+				display: block;
+				text-align: center;
+				margin: 10px;
+				
+			}
+			a:hover{
+				color: yellow;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="background_img_div"></div>	
+		
+		
+		<div class="box_father">
+			
+			<h1 style="font-size:100px; color: white;text-align: center;">
+				Activision
+			</h1>
+			
+			<b style="color: white;">SIGN UP NOW!</b>
+			<b style="color: white;">创建您的账号</b>
+			
+			<div class="div_son">
+				
+					
+				
+				<p class="p_father">
+					<p class="p_son">账号:</p>
+					<label><input class="input_massage" type="text" name="user"placeholder="不少于8位且有数字字母"></label>
+				</p>
+				
+				<p class="p_father">
+					<p class="p_son">密码:</p>
+					<label><input class="input_massage" type="text"name="password"/ placeholder="首字母大写且不少于8位"></label> 
+				</p>
+				
+				<p class="p_father">
+					<p class="p_son">确认密码:</p>
+					<label><input class="input_massage" type="text"name="password"/ placeholder="请输入与上方相同密码"></label> 
+				</p>
+				
+				<p class="p_father">
+					<p class="p_son">电子邮件地址:</p>
+					<label></label>	<input class="input_massage" class="box1" type="email" placeholder="请输入您的邮箱地址"/>
+				</p>
+				
+				<a class="bt" href="">立即注册!</a>
+				
+			
+				
+			</div>
+			<p style="text-align: center;font-size: 20px;color: white;">已經取得了Activision帳號？<a style="color: yellow;" href="">Sign in</a></p>
+		</div>	
+		
+		
+		
+		
+		<footer>
+			<div class="footer_div_father">
+				
+				<ul class="ul">
+					<li><a href="">LEGAL</a></li>
+					<li><a href="">TERMS OF USE</a></li>
+					<li><a href="">PRIVACY POLICY</a></li>
+					<li><a href="">COOKIE POLICY</a></li>
+					<li><a href="">COOKIE SETTINGS</a></li>
+					<li><a href="">ONLINE SAFETY</a></li>
+					<li><a href="">SUPPORT</a></li>
+				</ul>
+				
+				<div><img class="img_logo" src="../img/loge.png" ></div>
+				<div><img class="img_age" src="../img/age.png" ></div>
+			</div>
+			
+			
+		</footer>
+	</body>
+</html>
